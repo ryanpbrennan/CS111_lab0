@@ -1,0 +1,20 @@
+NAME: Ryan Brennan
+EMAIL: rpbrennan@g.ucla.edu
+ID: 605347597
+
+lab.c compiles into a simple program that takes input from stdin or a 
+specified input files and copies it to stdout or a specified output file.
+
+smoketest.sh checks some of the basic functionality and smoketesthelper.sh
+makes sure all of the tests are successful. this is what is ultimately
+called for make check.
+
+smoke test cases include --segfault option alone, --segfault --catch both,
+successful copying of input file to output file, ensuring they're the same
+using diff, attempting to access a nonexistent file and checking for the 
+correct exit code, and trying to write to a readonly file by checking for
+the correct exit code.
+
+make dist will create a tarball of all relevant files to the project and
+make clean will purge them all, with the exception of the source files
+mentioned above.
